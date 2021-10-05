@@ -1,3 +1,8 @@
+.page-content {
+    float: right;
+    width: calc(100% - 81px);
+}
+
 h1 {
     margin-top: 100px;
     margin-left: 50px;

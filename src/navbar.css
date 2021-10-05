@@ -1,3 +1,25 @@
+/* styles pour v2 */
+.navbar-vertical {
+    /*background-color: #333333;*/
+    height: 100vh;
+    width: 50px;
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 100px 30px 50px 0px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    float: left;
+}
+
+.nav-item {
+    margin-bottom: 80px;
+    cursor: pointer;
+    transform: rotate(180deg);
+    font-family: 'Inter', sans-serif;
+}
+/* Fin du style v2 */
+
 .navbar-container {
     width: 100px;
     height: 50px;

@@ -28,42 +28,38 @@ class Navbar extends React.Component {
 
     render(){
         return(
-            <div className="logo-container">
-                <div>
-                    <img className="logo-img" src={logo} alt="logo" />
+            <div className="header-wrapper">
+                <div className="logo-container">
+                    <div>
+                        <img className="logo-img" src={logo} alt="logo" />
+                    </div>
+                    <Link to="/">
+                    <div className="logo-text-flex-container">
+                        <span className="logo-text">Florent PIANET</span>
+                        <span className="logo-text-line-2">Développement Web</span>
+                    </div>
+                    </Link>
                 </div>
-                <div className="logo-text-flex-container">
-                    <span className="logo-text">Florent PIANET</span>
-                    <span className="logo-text-line-2">Développement Web</span>
-                </div>
-                <div className={this.state.isClicked ? "navbar-container open" : "navbar-container"}>
-                    <div className="nav-icons">
-                        <div className={this.state.isClicked ? "nav-icon home display" : "nav-icon home hidden"}>
-                        <Link to="/"><FontAwesomeIcon icon={faHome} /><span>Accueil</span></Link>
-                        </div>
-                        <div className={this.state.isClicked ? "nav-icon profile display" : "nav-icon profile hidden"}>
-                        <Link to="/about"><FontAwesomeIcon icon={faUserCircle} /><span>Profil</span></Link>
-                        </div>
-                        <div className={this.state.isClicked ? "nav-icon projects display" : "nav-icon projects hidden"}>
-                        <Link to="/projects"><FontAwesomeIcon icon={faRocket} /><span>Projets</span></Link>
-                        </div>
-                        <div className={this.state.isClicked ? "nav-icon costs display" : "nav-icon costs hidden"}>
-                        <Link to="tarifs"><FontAwesomeIcon icon={faDollarSign} /><span>Tarifs</span></Link>
-                        </div>
-                        <div className={this.state.isClicked ? "nav-icon contact display" : "nav-icon contact hidden"}>
-                        <Link to="/contact"><FontAwesomeIcon icon={faCommentDots} /><span>Contact</span></Link>
-                        </div>
-                        <div className={this.state.isClicked ? "nav-icon adjust display" : "nav-icon adjust hidden"}>
-                        <FontAwesomeIcon icon={faAdjust} /><span>Contraste</span>
-                        </div>
-                        </div>
-                        <div
-                            id="nav-icon"
-                            className={this.state.isClicked ? "open" : ""}
-                            onClick={this.handleButton}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                <div className="navbar-vertical">
+                    <div className="nav-item">
+                        <Link to="/projects">
+                            Projets
+                        </Link>
+                    </div>
+                    <div className="nav-item">
+                        <Link to="/about">
+                        À Propos
+                        </Link>
+                    </div>
+                    <div className="nav-item">
+                        <Link to="/tarifs">
+                        Tarifs
+                        </Link>
+                    </div>
+                    <div className="nav-item">
+                        <Link to="/contact">
+                        Contact
+                        </Link>
                     </div>
                 </div>
             </div>

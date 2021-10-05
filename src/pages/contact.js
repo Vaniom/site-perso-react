@@ -1,9 +1,12 @@
 import React from "react";
+import "./pages.css";
 
 class Contact extends React.Component {
     render() {
         return(
-            <h1>Contact</h1>
+            <div className="page-content">
+                <h1>Contact</h1>
+            </div>
         )
     }
 }

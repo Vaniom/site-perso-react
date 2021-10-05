@@ -1,9 +1,12 @@
 import React from "react";
+import "./pages.css";
 
 class Tarifs extends React.Component {
     render() {
         return(
-            <h1>Tarifs</h1>
+            <div className="page-content">
+                <h1>Tarifs</h1>
+            </div>
         )
     }
 }

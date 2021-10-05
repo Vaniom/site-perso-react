@@ -4,7 +4,7 @@ import "./pages.css";
 class Home extends React.Component {
     render() {
         return(
-            <div>
+            <div className="page-content">
             <h1>Home</h1>
             </div>
         )
