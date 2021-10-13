@@ -1,24 +1,67 @@
 /* styles pour v2 */
 .navbar-vertical {
-    /*background-color: #333333;*/
-    height: 100vh;
-    width: 50px;
+    height: calc(100% - 94px);
+    width: 80px;
     writing-mode: vertical-rl;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
-    padding: 100px 30px 50px 0px;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
     float: left;
 }
 
 .nav-item {
-    margin-bottom: 80px;
     cursor: pointer;
     transform: rotate(180deg);
     font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1em;
+}
+
+.mobile-nav-icon {
+    display: none;
+}
+
+.mobile-nav-menu {
+    opacity: 0;
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: calc(100% - 94px);
+    bottom: -100%;
+    transition-property: opacity, bottom;
+    transition-duration: 5s, .8s;
 }
 /* Fin du style v2 */
+
+/* anim hover */
+.nav-item {
+    padding: 15px 5px;
+}
+
+.nav-item {
+    transition-property: background-color, color;
+    transition-duration: 0.8s, 0.5s;
+}
+
+.nav-item:hover {
+    background-color:rgba(255, 255, 255, 0.7);
+    color: #333333;
+}
+/* Fin anim hover */
+
+.social-icons {
+    writing-mode: horizontal-tb !important;
+    margin-bottom: 30px;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons span:not(:last-child) {
+    margin-bottom: 20px;
+}
 
 .navbar-container {
     width: 100px;
@@ -86,9 +129,10 @@
 /* Animation icone hamburger */
 #nav-icon {
     width: 60px;
-    height: 40px;
+    height: 60px;
     position: fixed;
     right: 30px;
+    margin-top: 20px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -103,7 +147,7 @@
   #nav-icon span {
     display: block;
     position: absolute;
-    height: 5px;
+    height: 1px;
     width: 70%;
     background: #ffffff;
     border-radius: 9px;
@@ -118,19 +162,19 @@
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
   }
-  
+
   #nav-icon span:nth-child(1) {
     top: 0px;
   }
-  
+
   #nav-icon span:nth-child(2) {
     top: 18px;
   }
-  
+
   #nav-icon span:nth-child(3) {
     top: 36px;
   }
-  
+
   #nav-icon.open span:nth-child(1) {
     top: 18px;
     -webkit-transform: rotate(135deg);
@@ -138,12 +182,12 @@
     -o-transform: rotate(135deg);
     transform: rotate(135deg);
   }
-  
+
   #nav-icon.open span:nth-child(2) {
     opacity: 0;
     left: -60px;
   }
-  
+
   #nav-icon.open span:nth-child(3) {
     top: 18px;
     -webkit-transform: rotate(-135deg);
@@ -193,3 +237,41 @@
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+
+
+/*NavBar smartphones et tablettes*/
+
+@media only screen and (max-width: 1024px) {
+    .header-wrapper { 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .mobile-nav-icon {
+        display: block;
+    }
+    .navbar-vertical {
+        display: none;
+    }
+    .mobile-nav-menu.open {
+        opacity: 1;
+        bottom: 0;
+        transition-property: opacity, bottom;
+        transition-duration: 5s, .8s;
+    }
+    .mobile-nav-item:first-child {
+        padding-top: 40px;
+    }
+    .mobile-nav-item:last-child span {
+        padding-top: 40px;
+        padding-right: 20px;
+    }
+    .mobile-nav-item {
+        text-align: center;
+        padding-bottom: 5vh;
+        font-size: 2rem;
+    }
+}
+
+/* Fin Navbar mobile styles */

@@ -1,9 +1,21 @@
+@font-face {
+    font-family: 'a_braggastripregular';
+    src: url('../assets/fonts/a_braggastrip_fr.allfont.net-webfont.woff2') format('woff2'),
+         url('../assets/fonts/a_braggastrip_fr.allfont.net-webfont.woff') format('woff'),
+         url('../assets/fonts/a_braggastrip_[fr.allfont.net].ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .page-content {
     float: right;
     width: calc(100% - 81px);
 }
 
 h1 {
+    font-size: 20rem;
     margin-top: 100px;
     margin-left: 50px;
+    color: rgba(255, 255, 255, 0.08);
 }
+

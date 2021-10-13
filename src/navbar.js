@@ -1,12 +1,9 @@
 import React from "react";
 import "./navbar.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { faRocket } from '@fortawesome/free-solid-svg-icons';
-import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
-import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
-import { faAdjust } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import logo from "./assets/img/logo_sans_fond_simple.png";
 
@@ -26,19 +23,42 @@ class Navbar extends React.Component {
         };
     }
 
+    handleClickItem = () => {
+        this.setState({isClicked: false});
+    }
+
     render(){
         return(
             <div className="header-wrapper">
                 <div className="logo-container">
-                    <div>
+                <Link to="/">
+                    <div onClick={this.handleClickItem}>
                         <img className="logo-img" src={logo} alt="logo" />
                     </div>
+                    </Link>
                     <Link to="/">
-                    <div className="logo-text-flex-container">
+                    <div className="logo-text-flex-container" onClick={this.handleClickItem}>
                         <span className="logo-text">Florent PIANET</span>
                         <span className="logo-text-line-2">Développement Web</span>
                     </div>
                     </Link>
+                </div>
+                <div 
+                    className={this.state.isClicked ? "mobile-nav-icon open" : "mobile-nav-icon"} 
+                    id="nav-icon" 
+                    onClick={this.handleButton}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div className={this.state.isClicked ? "mobile-nav-menu open" : "mobile-nav-menu"}>
+                    <Link to="/projects"><div className="mobile-nav-item" onClick={this.handleClickItem}>Projets</div></Link>
+                    <Link to="/about"><div className="mobile-nav-item" onClick={this.handleClickItem}>À Propos</div></Link>
+                    <Link to="/tarifs"><div className="mobile-nav-item" onClick={this.handleClickItem}>Tarifs</div></Link>
+                    <Link to="/contact"><div className="mobile-nav-item" onClick={this.handleClickItem}>Contact</div></Link>
+                    <div className="mobile-nav-item"><span className="facebook-icon" onClick={this.handleClickItem}><a href="https://www.facebook.com/florentpianet.webdev" target="_blank"><FontAwesomeIcon icon={faFacebook} /></a></span>
+                        <span className="insta-icon"><a href="https://www.instagram.com/florentpianet/?hl=fr" target="_blank" onClick={this.handleClickItem}><FontAwesomeIcon icon={faInstagram} /></a></span>
+                        <span className="github-icon"><a href="https://github.com/Vaniom" target="_blank" onClick={this.handleClickItem}><FontAwesomeIcon icon={faGithub} /></a></span></div>
                 </div>
                 <div className="navbar-vertical">
                     <div className="nav-item">
@@ -48,7 +68,7 @@ class Navbar extends React.Component {
                     </div>
                     <div className="nav-item">
                         <Link to="/about">
-                        À Propos
+                        À Propos
                         </Link>
                     </div>
                     <div className="nav-item">
@@ -60,6 +80,11 @@ class Navbar extends React.Component {
                         <Link to="/contact">
                         Contact
                         </Link>
+                    </div>
+                    <div className="social-icons">
+                        <span className="facebook-icon"><a href="https://www.facebook.com/florentpianet.webdev" target="_blank"><FontAwesomeIcon icon={faFacebook} /></a></span>
+                        <span className="insta-icon"><a href="https://www.instagram.com/florentpianet/?hl=fr" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a></span>
+                        <span className="github-icon"><a href="https://github.com/Vaniom" target="_blank"><FontAwesomeIcon icon={faGithub} /></a></span>
                     </div>
                 </div>
             </div>
