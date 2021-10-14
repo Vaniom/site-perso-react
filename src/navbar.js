@@ -52,10 +52,10 @@ class Navbar extends React.Component {
                     <span></span>
                 </div>
                 <div className={this.state.isClicked ? "mobile-nav-menu open" : "mobile-nav-menu"}>
-                    <Link to="/projects"><div className="mobile-nav-item" onClick={this.handleClickItem}>Projets</div></Link>
-                    <Link to="/about"><div className="mobile-nav-item" onClick={this.handleClickItem}>À Propos</div></Link>
-                    <Link to="/tarifs"><div className="mobile-nav-item" onClick={this.handleClickItem}>Tarifs</div></Link>
-                    <Link to="/contact"><div className="mobile-nav-item" onClick={this.handleClickItem}>Contact</div></Link>
+                    <div className="mobile-nav-item" onClick={this.handleClickItem}><Link to="/projects">Projets</Link></div>
+                    <div className="mobile-nav-item" onClick={this.handleClickItem}><Link to="/about">À Propos</Link></div>
+                    <div className="mobile-nav-item" onClick={this.handleClickItem}><Link to="/tarifs">Tarifs</Link></div>
+                    <div className="mobile-nav-item" onClick={this.handleClickItem}><Link to="/contact">Contact</Link></div>
                     <div className="mobile-nav-item"><span className="facebook-icon" onClick={this.handleClickItem}><a href="https://www.facebook.com/florentpianet.webdev" target="_blank"><FontAwesomeIcon icon={faFacebook} /></a></span>
                         <span className="insta-icon"><a href="https://www.instagram.com/florentpianet/?hl=fr" target="_blank" onClick={this.handleClickItem}><FontAwesomeIcon icon={faInstagram} /></a></span>
                         <span className="github-icon"><a href="https://github.com/Vaniom" target="_blank" onClick={this.handleClickItem}><FontAwesomeIcon icon={faGithub} /></a></span></div>

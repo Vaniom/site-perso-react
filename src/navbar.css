@@ -1,5 +1,6 @@
 /* styles pour v2 */
 .navbar-vertical {
+    position: fixed;
     height: calc(100% - 94px);
     width: 80px;
     writing-mode: vertical-rl;
@@ -9,6 +10,13 @@
     flex-direction: row;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     float: left;
+}
+
+.header-wrapper {
+    position: fixed;
+    width: 100%;
+    background-color: #000000;
+    z-index: 98;
 }
 
 .nav-item {
@@ -28,10 +36,13 @@
     position: absolute;
     background-color: #000000;
     width: 100%;
-    height: calc(100% - 94px);
-    bottom: -100%;
-    transition-property: opacity, bottom;
-    transition-duration: 5s, .8s;
+    z-index: 999;
+    height: 100vh;
+    /*height: calc(100% - 94px);*/
+    /*bottom: -1000%;*/
+    top: 300vh;
+    transition-property: opacity, top;
+    transition-duration: 3s, .8s;
 }
 /* Fin du style v2 */
 
@@ -256,9 +267,10 @@
     }
     .mobile-nav-menu.open {
         opacity: 1;
-        bottom: 0;
-        transition-property: opacity, bottom;
-        transition-duration: 5s, .8s;
+        /*bottom: 0;*/
+        top: 94px;
+        transition-property: opacity, top;
+        transition-duration: 2s, .8s;
     }
     .mobile-nav-item:first-child {
         padding-top: 40px;
