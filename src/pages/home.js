@@ -8,8 +8,8 @@ class Home extends React.Component {
         return(
             <div className="page-content">
                 <div className="main-content">
-                    <img className="background-img home1" src={home1} />
-                    <img className="anmo" src={anmo} />
+                    <img className="background-img home1" src={home1} alt=""/>
+                    <img className="anmo" src={anmo} alt="illustration site"/>
                     <p>Je suis développeur web, j’accompagne les professionnels, associations et collectivités à renforcer leur présence en ligne en concevant et développant des sites web personnalisés grâce au CMS WordPress.</p>
                     <p>Je suis développeur web, j’accompagne les professionnels, associations et collectivités à renforcer leur présence en ligne en concevant et développant des sites web personnalisés grâce au CMS WordPress.</p>
                     <p>Je suis développeur web, j’accompagne les professionnels, associations et collectivités à renforcer leur présence en ligne en concevant et développant des sites web personnalisés grâce au CMS WordPress.</p>
