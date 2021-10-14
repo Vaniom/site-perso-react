@@ -1,7 +1,20 @@
 body {
     margin: 0;
     background-color: #000000;
+    overflow-x: hidden;
 }
+
+/* masquer les scrollbars */
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    width: 0 !important;
+}
+/* fin de masquer les scrollbars */
+
 .background {
     /*position: fixed;*/
     width: 100vw;

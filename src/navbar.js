@@ -22,12 +22,12 @@ class Navbar extends React.Component {
             this.setState({isClicked: true})
         } else {
             this.setState({isClicked: false})
-        };
+        }
     }
 
     handleClickItem = () => {
         this.setState({isClicked: false});
-    }
+    };
 
     render(){
         return(
@@ -64,22 +64,22 @@ class Navbar extends React.Component {
                 </div>
                 <div className="navbar-vertical">
                     <div className="nav-item">
-                        <NavLink ActiveClassName="active" to="/projects">
+                        <NavLink activeClassName="active" to="/projects">
                             Projets
                         </NavLink>
                     </div>
                     <div className="nav-item">
-                        <NavLink ActiveClassName="active" to="/about">
+                        <NavLink activeClassName="active" to="/about">
                         À Propos
                         </NavLink>
                     </div>
                     <div className="nav-item">
-                        <NavLink ActiveClassName="active" to="/tarifs">
+                        <NavLink activeClassName="active" to="/tarifs">
                         Tarifs
                         </NavLink>
                     </div>
                     <div className="nav-item">
-                        <NavLink ActiveClassName="active" to="/contact">
+                        <NavLink activeClassName="active" to="/contact">
                         Contact
                         </NavLink>
                     </div>
@@ -91,7 +91,7 @@ class Navbar extends React.Component {
                 </div>
             </div>
         )
-    }
+    };
 }
 
 export default Navbar;
