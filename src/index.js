@@ -5,7 +5,7 @@ import Nav from './nav';
 
 reactDom.render(
     <div className="main-container background">
-        <Nav></Nav>
+        <Nav />        
     </div>,
     document.getElementById('root')
 );

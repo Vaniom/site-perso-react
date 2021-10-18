@@ -2,6 +2,12 @@ body {
     margin: 0;
     background-color: #000000;
     overflow-x: hidden;
+    cursor: none;
+    height: 100vh;
+}
+
+a:any-link {
+    cursor: none;
 }
 
 /* masquer les scrollbars */
